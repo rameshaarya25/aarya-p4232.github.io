@@ -10,46 +10,63 @@
 <body>
 
     <nav>
-     
+        <div class="logo">Aarya<span>.AI</span></div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#achievements">Achievements</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Hi, I'm <span class="neon-text">Aarya Pokharkar</span></h1>
-        <p>19-year-old AI & Data Science Student at SAKEC</p>
-        <p class="description">Building the future through code, logic, and real-world problem solving.</p>
+        <div class="hero-content">
+            <h1>Aarya <span class="accent-text">Pokharkar</span></h1>
+            <p class="tagline">AI & Data Science | First-Year Engineering at SAKEC</p>
+            <div class="hero-btns">
+                <button class="primary-btn" onclick="document.getElementById('about').scrollIntoView();">Explore Portfolio</button>
+            </div>
+        </div>
     </header>
 
     <div class="container">
 
         <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>First-Year Engineering student passionate about Artificial Intelligence and Data Science.</p>
-            <button class="neon-btn" onclick="toggleDisplay('eduDetails')">View Education Details</button>
+            <h2><i class="fas fa-user-graduate"></i> About Me</h2>
+            <p>19-year-old student at Shah and Anchor Kutchhi Engineering College, dedicated to mastering the intersection of human logic and machine intelligence.</p>
+            
+            <button class="toggle-btn" onclick="toggleDisplay('eduDetails')">View Academic Path</button>
             <div id="eduDetails" class="hidden-content">
-                <ul class="edu-list">
-                    <li><strong>10th Grade:</strong> Udayachal High School - <span class="neon-text">91%</span></li>
-                    <li><strong>12th Grade:</strong> Matunga Pioneer College - <span class="neon-text">71%</span></li>
-                </ul>
+                <div class="edu-item">
+                    <p><strong>10th Grade:</strong> Udayachal High School <span class="score">91%</span></p>
+                </div>
+                <div class="edu-item">
+                    <p><strong>12th Grade:</strong> Matunga Pioneer College <span class="score">71%</span></p>
+                </div>
             </div>
         </section>
 
-        <section id="goals" class="card">
-            <h2>Career Goals</h2>
-            <p>My goal is to bridge the gap between complex data and practical human solutions. I aim to master Machine Learning architectures and contribute to open-source AI projects that impact global accessibility.</p>
+        <section id="achievements" class="card">
+            <h2><i class="fas fa-award"></i> Achievements</h2>
+            <div class="achievement-grid">
+                <div class="ach-box">
+                    <p>IIT Bombay Spoken Tutorial (C)</p>
+                    <button class="outline-btn" onclick="toggleDisplay('certC')">Click to view C certificate</button>
+                    <img id="certC" src="c_cert.png" alt="C Certificate" class="cert-img">
+                </div>
+                <div class="ach-box">
+                    <p>MATLAB Course (2 Hours)</p>
+                    <button class="outline-btn" onclick="toggleDisplay('certMat')">Click to view MATLAB certificate</button>
+                    <img id="certMat" src="matlab_cert.png" alt="MATLAB Certificate" class="cert-img">
+                </div>
+            </div>
         </section>
 
-        <section id="interests" class="card">
-            <h2>Interests</h2>
-            <button class="neon-btn" onclick="toggleDisplay('interestList')">View My Interests</button>
+        <section class="card">
+            <h2><i class="fas fa-lightbulb"></i> Interests</h2>
+            <button class="toggle-btn" onclick="toggleDisplay('interestList')">Personal Interests</button>
             <div id="interestList" class="hidden-content">
-                <ul>
+                <ul class="custom-list">
                     <li>Communication & Debating</li>
                     <li>Keen Martial Artist</li>
                     <li>Logical Thinking & Problem Solving</li>
@@ -57,69 +74,42 @@
             </div>
         </section>
 
-        <section id="achievements" class="card">
-            <h2>Achievements</h2>
-            <div class="achievement-item">
-                <p>Spoken Tutorial IIT Bombay Course (C Programming)</p>
-                <button class="neon-btn-outline" onclick="toggleDisplay('certC')">Click to view C certificate</button>
-                <img id="certC" src="c_cert.png.jpeg" alt="C Certificate" class="cert-img">
-            </div>
-
-            <div class="achievement-item">
-                <p>2-Hour MATLAB Course (MathWorks)</p>
-                <button class="neon-btn-outline" onclick="toggleDisplay('certMat')">Click to view MATLAB certificate</button>
-                <img id="certMat" src="matlab_cert.png.jpeg" alt="MATLAB Certificate" class="cert-img">
-            </div>
-        </section>
-
         <section id="skills" class="card">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div>
+            <h2><i class="fas fa-tools"></i> Technical Toolkit</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
                     <h3>Programming</h3>
                     <p>C, C++, Python, Java, Web Development</p>
                 </div>
-                <div>
-                    <h3>Creative & Design Tools</h3>
+                <div class="skill-category">
+                    <h3>Creative Design</h3>
                     <p>AutoCAD, Tinkercad, Canva, MATLAB</p>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="card">
-            <h2>Projects</h2>
-            <div class="project-buttons">
-                <button class="neon-btn">Library Management System</button>
-                <button class="neon-btn">Restaurant Billing System</button>
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="project-grid">
+                <div class="project-tile">Library Management System</div>
+                <div class="project-tile">Restaurant Billing System</div>
             </div>
         </section>
 
         <section id="contact" class="card center">
-            <h2>Contact Me</h2>
-            <div class="social-icons">
-                <a href="https://github.com/rameshaarya25" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:ramesh.aarya25@sakec.ac.in" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/rameshaarya25" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:ramesh.aarya25@sakec.ac.in"><i class="fas fa-envelope"></i></a>
             </div>
         </section>
 
     </div>
 
-    <footer>
-        <p>&copy; 2026 Aarya Pokharkar | AI & DS Engineer</p>
-    </footer>
-
     <script>
         function toggleDisplay(id) {
-            const element = document.getElementById(id);
-            if (element.style.display === "block") {
-                element.style.display = "none";
-            } else {
-                element.style.display = "block";
-            }
+            const el = document.getElementById(id);
+            el.style.display = (el.style.display === "block") ? "none" : "block";
         }
     </script>
 </body>
