@@ -10,9 +10,9 @@
 <body>
 
     <nav>
-       
         <div class="nav-links">
             <a href="#about">About</a>
+            <a href="#academics">Academics</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -46,17 +46,38 @@
             </div>
         </section>
 
+        <section id="academics" class="card">
+            <h2><i class="fas fa-file-invoice"></i> Academic Marksheets & Results</h2>
+            <div class="achievement-grid">
+                <div class="ach-box">
+                    <p>10th Grade Marksheet</p>
+                    <button class="outline-btn" onclick="toggleDisplay('mark10')">View 10th Marksheet</button>
+                    <img id="mark10" src="10th_marksheet.png" alt="10th Marksheet" class="cert-img">
+                </div>
+                <div class="ach-box">
+                    <p>12th Grade Marksheet</p>
+                    <button class="outline-btn" onclick="toggleDisplay('mark12')">View 12th Marksheet</button>
+                    <img id="mark12" src="12th_marksheet.png" alt="12th Marksheet" class="cert-img">
+                </div>
+                <div class="ach-box">
+                    <p>Semester 1 Result</p>
+                    <button class="outline-btn" onclick="toggleDisplay('sem1Result')">View Sem 1 Result</button>
+                    <img id="sem1Result" src="sem1_result.png" alt="Semester 1 Result" class="cert-img">
+                </div>
+            </div>
+        </section>
+
         <section id="achievements" class="card">
-            <h2><i class="fas fa-award"></i> Achievements</h2>
+            <h2><i class="fas fa-award"></i> Certifications</h2>
             <div class="achievement-grid">
                 <div class="ach-box">
                     <p>IIT Bombay Spoken Tutorial (C)</p>
-                    <button class="outline-btn" onclick="toggleDisplay('certC')">Click to view C certificate</button>
+                    <button class="outline-btn" onclick="toggleDisplay('certC')">View C Certificate</button>
                     <img id="certC" src="c_cert.png" alt="C Certificate" class="cert-img">
                 </div>
                 <div class="ach-box">
                     <p>MATLAB Course (2 Hours)</p>
-                    <button class="outline-btn" onclick="toggleDisplay('certMat')">Click to view MATLAB certificate</button>
+                    <button class="outline-btn" onclick="toggleDisplay('certMat')">View MATLAB Certificate</button>
                     <img id="certMat" src="matlab_cert.png" alt="MATLAB Certificate" class="cert-img">
                 </div>
             </div>
@@ -70,6 +91,7 @@
                     <li>Communication & Debating</li>
                     <li>Keen Martial Artist</li>
                     <li>Logical Thinking & Problem Solving</li>
+                    <li>Web Technologies</li>
                 </ul>
             </div>
         </section>
@@ -87,10 +109,12 @@
                 </div>
             </div>
         </section>
-<section id="goals" class="card">
+
+        <section id="goals" class="card">
             <h2>Career Goals</h2>
             <p>My goal is to bridge the gap between complex data and practical human solutions. I aim to master Machine Learning architectures and contribute to open-source AI projects that impact global accessibility.</p>
         </section>
+
         <section id="projects" class="card">
             <h2><i class="fas fa-project-diagram"></i> Projects</h2>
             <div class="project-grid">
@@ -112,7 +136,12 @@
     <script>
         function toggleDisplay(id) {
             const el = document.getElementById(id);
-            el.style.display = (el.style.display === "block") ? "none" : "block";
+            // This ensures smooth toggling between hidden and block
+            if (el.style.display === "block") {
+                el.style.display = "none";
+            } else {
+                el.style.display = "block";
+            }
         }
     </script>
 </body>
